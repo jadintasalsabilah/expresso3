@@ -28,6 +28,8 @@ public class OrderSummaryActivityTest {
     @RunWith(AndroidJUnit4.class)
     public class OrderSummaryActivityTest {
 
+        private static final String emailMessage = "I just ordered a delicious tea from TeaTime. Next time you are craving a tea, check them out!";
+
 
     // TODO (4) Finish this method which verifies that the intent sent by clicking the send email
     // button matches the intent sent by the application
