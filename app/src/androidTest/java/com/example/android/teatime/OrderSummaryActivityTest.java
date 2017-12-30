@@ -36,5 +36,8 @@ public class OrderSummaryActivityTest {
 
     public void clickSendEmailButton_SendsEmail() {
 
+        @Rule
+        public IntentsTestRule<OrderSummaryActivity> mActivityRule = new IntentsTestRule<>(
+                OrderSummaryActivity.class);
     }
 }
