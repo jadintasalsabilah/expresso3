@@ -25,9 +25,8 @@ public class OrderSummaryActivityTest {
     // TODO (3) Finish this method which runs before each test and will stub all external
     // intents so all external intents will be blocked
 
-    public void stubAllExternalIntents() {
-
-    }
+    @RunWith(AndroidJUnit4.class)
+    public class OrderSummaryActivityTest {
 
 
     // TODO (4) Finish this method which verifies that the intent sent by clicking the send email
