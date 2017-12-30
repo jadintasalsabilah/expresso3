@@ -45,5 +45,12 @@ public class OrderSummaryActivityTest {
         }
 
         @Test
+
+                onView(withId(R.id.send_email_button)).perform(click());
+        // intended(Matcher<Intent> matcher) asserts the given matcher matches one and only one
+        // intent sent by the application.
+        intended(allOf(
+                hasAction(Intent.ACTION_SENDTO),
+                hasExtra(Intent.EXTRA_TEXT, emailMessage)));
     }
 }
