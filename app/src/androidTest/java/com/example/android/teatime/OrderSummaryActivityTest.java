@@ -31,13 +31,19 @@ public class OrderSummaryActivityTest {
         private static final String emailMessage = "I just ordered a delicious tea from TeaTime. Next time you are craving a tea, check them out!";
 
 
-    // TODO (4) Finish this method which verifies that the intent sent by clicking the send email
-    // button matches the intent sent by the application
-
     public void clickSendEmailButton_SendsEmail() {
 
         @Rule
         public IntentsTestRule<OrderSummaryActivity> mActivityRule = new IntentsTestRule<>(
                 OrderSummaryActivity.class);
+
+        @Before
+        public void stubAllExternalIntents () {
+            // By default Espresso Intents does not stub any Intents. Stubbing needs to be setup before
+            // every test run. In this case all external Intents will be blocked.
+            intending(not(isInternal())).respondWith(new ActivityResult(Activity.RESULT_OK, null));
+        }
+
+        @Test
     }
 }
